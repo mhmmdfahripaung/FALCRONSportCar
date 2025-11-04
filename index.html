@@ -204,7 +204,7 @@
       <h2>Produk Unggulan</h2>
       <div class="produk-item" role="list">
         <article class="card" role="listitem" aria-labelledby="prod1-title">
-          <img src="falcron.jpg" alt="Falcron HyperX">
+          <img src="falcron1.jpg" alt="Falcron HyperX">
           <div class="card-body">
             <h3 id="prod1-title">FALCRON HyperX</h3>
             <p>Mobil listrik berperforma tinggi dengan sistem AI adaptif dan kecepatan hingga 400 km/jam.</p>
@@ -345,8 +345,11 @@
     // Sales R (lokal): 088220423371 -> international: 6288220423371
     const primarySales = ["6283879414716", "6288220423371"];
 
+    // Fungsi goPreorder sekarang mengirim pesan WhatsApp ke sales pertama (primarySales[0])
     function goPreorder() {
-      window.location.href = "https://example.com/form-preorder";
+      const number = primarySales[0];
+      const message = encodeURIComponent("Halo, saya tertarik untuk melakukan PRE-ORDER FALCRON HyperTech. Mohon info ketersediaan, harga final, dan langkah selanjutnya. Terima kasih.");
+      window.open(`https://wa.me/${number}?text=${message}`, "_blank");
     }
 
     function openWhatsAppSales(number) {
@@ -401,5 +404,4 @@
     });
   </script>
 </body>
-</html>
 </html>
